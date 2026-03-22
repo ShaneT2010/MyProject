@@ -230,7 +230,7 @@ $(() => {
         if (inputTime == 4) {
             stringLucky += 'm6!3m5!1s0x3468933811b3eeb5:0xc95761a7402da803!8m2!3d24.1371281!4d121.275739!16s%2Fg%2F155r96dm'
             $('#confirm').text('這是哪裡呢')
-            $('#dent_input').show()
+            $('#my_input').show()
         }
         if (inputTime >= 5) {
             window.open('https://www.google.com.tw/maps/@' + stringLucky)
@@ -241,17 +241,17 @@ $(() => {
         console.log(stringLucky)
     })
 
-    $('#dent_input').keypress(function(e) {
+    $('#my_input').keypress(function(e) {
         var key = window.event ? e.keyCode : e.which
         var blank = ' '
         if (key == 13) {
-            blank = $('#dent_input').val()
+            blank = $('#my_input').val()
             console.log(blank)
             if (blank == '合歡山武嶺牌樓') {
-                $('#dent_input').hide()
+                $('#my_input').hide()
                 $('#last').show()
                 (() => {  
-                    $('a[href="#dentist"]')[0].click()
+                    $('a[href="#mylast"]')[0].click()
                 })()
             } else {
                 alert('Mission Failed...')
